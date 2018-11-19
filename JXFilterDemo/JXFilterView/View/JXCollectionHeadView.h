@@ -10,7 +10,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void(^BtnClickBlock)(void);
 @interface JXCollectionHeadView : UICollectionReusableView
+
+@property (nonatomic, assign) BOOL isClick;
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *strSelect;
+@property (nonatomic, copy) BtnClickBlock btnClickBlock;
+
+//@property (nonatomic, strong) void(^btnClickBlock)(void);
 
 @end
 

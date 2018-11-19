@@ -7,10 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JXMainView.h"
+#import "JXFilterModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void(^ReturnFilterArr) (NSArray *arr);
 @interface JXScreenView : UIView
+
+@property (nonatomic, strong) JXMainView *mainView;
+@property (nonatomic, copy) ReturnFilterArr returnFilterArr;
 
 @end
 
